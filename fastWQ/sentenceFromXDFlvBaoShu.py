@@ -30,7 +30,7 @@ class sentencesFromXDFLvBaoShu(WebService):
         
         #匹配 例字之后的句子
         pattern = "(?<=\u4f8b)[\s\S]*\."  
-        result['sentence'] = re.search( r'(?<=\u4f8b)\s[\s\S]*\.', string, re.M|re.I).group(0)
+        result['sentence'] = re.search( r'(?<=\u4f8b)[^\u4e00-\u9fa5]+', string, re.M|re.I).group(0)
 
 
 
